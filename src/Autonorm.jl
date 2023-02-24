@@ -139,7 +139,7 @@ function _ff1(ch, candidate)::Float64
 
     for (key, df) in candidate.db
 
-        score = score + prod(size(df))
+        score = score + nrow(df) * (ncol(df) + 1)
 
     end
 
